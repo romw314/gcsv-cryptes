@@ -1,0 +1,14 @@
+{
+	"name": "gcsv-cryptes",
+	"version": "0.0.1",
+	"main": "index.js",
+	"bin": "index.js",
+	"repository": "https://github.com/romw314/gcsv-cryptes",
+	"author": "romw314",
+	"license": "Unlicense",
+	"private": false,
+	"dependencies": {
+		"cryptr": "^6.3.0",
+		"prompts": "^2.4.2"
+	}
+}
