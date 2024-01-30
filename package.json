@@ -5,7 +5,7 @@
 	"bin": "index.js",
 	"repository": "https://github.com/romw314/gcsv-cryptes",
 	"author": "romw314",
-	"license": "Unlicense",
+	"license": "MIT",
 	"private": false,
 	"dependencies": {
 		"cryptr": "^6.3.0",
