@@ -7,7 +7,7 @@ jobs:
   test-node:
     # Install node dependencies and run tests
     docker:
-      - image: cimg/base@current
+      - image: cimg/base:current-22.04
     environment:
       JEST_JUNIT_OUTPUT_DIR: ./test-results/
     steps:
