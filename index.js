@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const pkg = require('./package.json');
-const fs = require('fs');
+const fs = global._gcsvtes_fs ?? require('fs');
 const Cryptr = require('cryptr');
 const { prompts } = require('prompts');
 

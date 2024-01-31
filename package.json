@@ -10,5 +10,8 @@
 	"dependencies": {
 		"cryptr": "^6.3.0",
 		"prompts": "^2.4.2"
+	},
+	"devDependencies": {
+		"jest": "^29.7.0"
 	}
 }
