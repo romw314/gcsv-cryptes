@@ -1,0 +1,30 @@
+# This config was automatically generated from your source code
+# Stacks detected: deps:node:.,package_manager:yarn:,test:jest:
+version: 2.1
+orbs:
+  node: circleci/node@5.2.0
+jobs:
+  test-node:
+    # Install node dependencies and run tests
+    docker:
+      - image: cimg/base:current-22.04
+    environment:
+      JEST_JUNIT_OUTPUT_DIR: ./test-results/
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          node-version: '18.19.0'
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn add jest-junit --ignore-workspace-root-check
+      - run:
+          name: Run tests with Jest
+          command: ./node_modules/.bin/jest --ci --runInBand --reporters=default --reporters=jest-junit
+      - store_test_results:
+          path: ./test-results/
+workflows:
+  build-and-test:
+    jobs:
+      - test-node
